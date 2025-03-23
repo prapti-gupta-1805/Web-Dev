@@ -1,0 +1,29 @@
+h1 {
+    color:cornflowerblue;
+    background-color: black;
+}
+
+/* colour systems:
+    Named: red
+    RGB: rgb(255, 0, 0) red = 255, green = 0, blue = 0
+    HEX: #ff0000 red = ff, green = 00, blue = 00
+*/
+
+h2 {
+    text-align: center; /* left, right, center, justify */
+    font-weight: bold; /* normal, bold, bolder, lighter */
+    font-style: italic; /* normal, italic, oblique */
+    text-decoration: underline; /* underline, overline, line-through */
+    line-height: 20px; 
+    letter-spacing: 3px; 
+    font-size: 20px; 
+}
+
+/* font size units:
+    px: pixels
+    em: relative to the font size of the element
+    rem: relative to the font size of the root element
+    %: percentage of the parent element
+    vw: 1% of the viewport width
+    vh: 1% of the viewport height
+*/
