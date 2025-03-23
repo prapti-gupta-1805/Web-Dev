@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Notes</title>
+</head>
+<body>
+
+    <h2>Headings</h2>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    
+    <hr> <!--Horizontal Rule Tag-->
+
+    <h2>Types of texts</h2>
+
+    <p>Paragraph Tag</p>
+
+    <br> <!--Line Break Tag-->
+    <b>bold text</b><br>
+    <i>italic text</i><br>
+    <mark>highlighted text</mark><br>
+    <del>strike-through text</del><br>
+    <u>underlined text</u><br>
+    <p>a<sub>subscript text</sub></p>
+    <p>a<sup>superscript text</sup></p><br>    
+
+    
+    <hr>
+
+    <h2>Lists</h2>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+
+    <h3>Description List</h3>
+    <dl>
+        <dt>Term 1</dt>
+        <dd>Definition for term 1</dd>
+        <dt>Term 2</dt>
+        <dd>Definition for term 2</dd>
+    </dl>
+
+    <hr>
+
+    <h2>Anchor Tag</h2>
+    <a href="https://www.google.com">Google</a>
+
+    <hr>
+
+    <h2>Image Tag</h2>
+    <!--alt attribute is used to describe the image when it is not visible-->
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" height = "50" width = "150"> <br>
+    <img src="https://ww.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" height = "50" width = "150">
+
+    <!--Inline element take full width available eg. heading tag-->
+    <!--Block element take only required width eg. paragraph tag-->
+
+    <hr>
+
+    <h2>Div Tag</h2>
+    <div style="background-color: lightblue;">Div Tag</div>
+
+    <hr>
+
+    <h2>Span Tag</h2>
+    <span style="background-color: lightblue;">Span Tag</span>
+
+    <hr>
+    
+    <h2>Semantic Tags</h2>
+    <header>Header Tag</header><br>
+    <nav>Nav Tag</nav><br>
+    <section>Section Tag</section><br>
+    <article>Article Tag</article><br>
+    <aside>Aside Tag</aside><br>
+    <footer>Footer Tag</footer><br>
+
+    <hr>
+
+    <h2>Entities</h2>
+
+    <p>&lt; 2020</p>
+    <p>&gt; 2020</p>
+    <p>&amp; 2020</p>
+    <p>&copy; 2020</p>
+    <p>&reg; 2020</p>
+    <p>&trade; 2020</p>
+    <p>&hearts; 2020</p>
+
+    <hr>
+
+    <!-- Emmet Shortcuts -->
+
+    <!-- ! + tab = boilerplate -->
+    <!-- h1 + tab = <h1></h1> -->
+    <!-- h1#myId + tab = <h1 id="myId"></h1> -->
+    <!-- h1.myClass + tab = <h1 class="myClass"></h1> -->
+    <!-- ul>li*2 + tab = <ul><li></li><li></li></ul> -->
+    <!-- div+p = <div></div><p></p>-->
+
+    <h2>Tables</h2>
+    <table border="1">
+        <caption>Snacks</caption>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chips</td>
+                <td>₹20</td>
+                <td>$0.24</td>
+            </tr>
+            <tr>
+                <td>Frooti</td>
+                <td>₹10</td>
+                <td>$0.12</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>₹30</td>
+                <td>$0.36</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <hr>
+
+    <h2>Forms</h2>
+    <form action="/action">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password"><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+    
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" placeholder="Enter your number"><br>
+    
+        <label for="date">Birthdate:</label>
+        <input type="date" id="date" name="birthdate"><br>
+    
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>
+    
+        <label for="feedback">Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="40" placeholder="Enter your feedback here..."></textarea><br>
+
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms">I agree to the terms and conditions</label><br>
+    
+        <button type="submit">Submit</button>
+    </form>    
+
+</body>
+</html>
