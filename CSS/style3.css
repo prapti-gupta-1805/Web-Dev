@@ -1,0 +1,33 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    margin: 60px;
+}
+
+#one {
+    position: static;
+    /* top, bottom, left, right, z-index properties have no effect */
+}
+
+#two {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    /* offset from the normal position */
+}
+
+#three {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* offset from the nearest positioned ancestor */
+}
+
+#four {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    /* offset from the viewport.
+    stays in the same place even when the page is scrolled */
+}
