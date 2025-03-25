@@ -1,0 +1,17 @@
+div {
+    height: 400px;
+    width: 400px;
+    background-color: aliceblue;
+    /* border-width: 3px;
+    border-color: black;
+    border-style: solid; */
+    border: 3px black solid;
+
+    border-left-style: dashed;
+
+    border-radius: 50px;
+    /* border-top-right-radius: 50px; */
+
+    /* border-radius: 50%; - to make it a circle */
+}
+
