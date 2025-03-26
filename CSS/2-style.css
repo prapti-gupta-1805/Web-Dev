@@ -24,6 +24,7 @@ div {
     top: 50px;
     left: 50px;
     /* offset from the nearest positioned ancestor */
+    z-index: -1; /* 0 by default */
 }
 
 #four {

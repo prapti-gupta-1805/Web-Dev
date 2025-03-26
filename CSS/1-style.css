@@ -172,9 +172,9 @@ id > class > element
 }
 
 #seven {
-    height: 200px;
-    width: 200px;
-    background-image: url('image.png');
+    height: 210px;
+    width: 450px;
+    background-image: url('box-model.png');
 
     background-size: cover; /* cover, contain, auto */
 }
