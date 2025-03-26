@@ -7,8 +7,16 @@
     display: flex;
     flex-direction: row; /* row, column, row-reverse, column-reverse */
     justify-content: space-evenly; /* flex-start, flex-end, center, space-between, space-around, space-evenly */
-    align-items: center; /* flex-start, flex-end, center */
     flex-wrap: wrap; /* wrap, nowrap, wrap-reverse */
+    align-items: center; /* flex-start, flex-end, center, baseline */
+    align-content: space-evenly; /* flex-start, flex-end, center, space-between, space-around, space-evenly */
+    align-self: center; /* flex-start, flex-end, center, baseline */
+    flex-basis: 100px; /*initial main size of the flex item*/
+    flex-grow: 1; /* how much the flex item will grow relative to the other flex items in the container */
+    max-width: 300px;
+    flex-shrink: 1;
+
+    /* flex shorthand: flex-grow flex-shrink flex-basis; */
 }
 
 h1 {
