@@ -3,6 +3,8 @@ div {
     width: 100px;
     background-color: pink;
     margin: 60px;
+    border: 1px solid black;
+    text-align: center;
 }
 
 #one {
@@ -26,8 +28,8 @@ div {
 
 #four {
     position: fixed;
-    top: 50px;
-    left: 50px;
+    top: 100px;
+    left: 100px;
     /* offset from the viewport.
     stays in the same place even when the page is scrolled */
 }
