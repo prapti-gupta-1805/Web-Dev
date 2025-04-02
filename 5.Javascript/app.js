@@ -39,7 +39,7 @@ console.log(`The total price is ${pencilPrice + eraserPrice} rupees`);
 //5 == '5' will return true (compares value not type)
 //5 === '5' will return false (compares value AND type)
 
-//loops
+//conditional statements
 let colour = 'red';
 if (colour ) {
     console.log("Stop!");
@@ -96,5 +96,47 @@ str1.repeat(3); //PRAptiPRApti
 
 
 //arrays
-let students = ["prapti", "aditya", "anshika"]
-students.length //3
+let students = ["prapti", "aditya", "anshika"];
+students.length; //3
+
+students.push("manik"); //will insert manik at end of array
+students.pop(); //will delete last element and return it
+students.unshift("anshika"); //add element to start of array
+students.shift(); //delete from start and return it
+
+students.indexOf("prapti"); //0
+
+students.includes("parashar"); //false
+
+let students2 = ["yash", "aman"];
+
+students.concat(students2); //concatenates second array into first array
+
+students.slice(0,1); //prapti
+
+students.splice(0,1,"arkin","gaurav"); //delete 1 item from 0 index, then add arkin and gaurav to the start of the array //arr.splice(start,deletecount,item 0,item N)
+
+students.sort();
+
+[1] == [1]; //will return false as array returns by reference
+
+stuCopy = students;
+stucopy == students; //will return true
+
+const count = [1,2,3,4];
+// array operations are still allowed as long as address isn't changed
+
+//nested array
+coordinates = [[0,0],[0,1],[1,0],[1,1]];
+
+//for loop
+for (let i = 1; i<=5 ; i++) {
+    console.log(i);
+}
+
+//while loop
+let i=0;
+while (i<=5) {
+    console.log(i);
+    i++;
+}
