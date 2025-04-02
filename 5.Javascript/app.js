@@ -87,3 +87,6 @@ str1.indexOf('A')
 console.log(str1.toUpperCase().trim());
 
 str1.slice(2,4) //Apt
+str1.slice(-2) //str1.slice(length-2) = 6-2 = 4 //ti
+
+str1.slice("PRA","pra") //replaces first arg with second arg
