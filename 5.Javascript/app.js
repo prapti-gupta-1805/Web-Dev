@@ -74,19 +74,27 @@ console.log(Name);
 
 //string methods
 str = "   prapti    ";
-console.log(str.trim());
+
+console.log(str.trim()); //prapti
 
 str1 = "PRApti";
 
 console.log(str.toUpperCase()); //PRAPTI
 console.log(str.toLowerCase()); //prapti
 
-str1.indexOf('A')
+str1.indexOf('A') //2
 
 //method chaining
 console.log(str1.toUpperCase().trim());
 
-str1.slice(2,4) //Apt
-str1.slice(-2) //str1.slice(length-2) = 6-2 = 4 //ti
+str1.slice(2,4); //Apt
+str1.slice(-2); //str1.slice(length-2) = 6-2 = 4 //ti
 
-str1.slice("PRA","pra") //replaces first arg with second arg
+str1.slice("PRA","pra"); //replaces first arg with second arg
+
+str1.repeat(3); //PRAptiPRApti
+
+
+//arrays
+let students = ["prapti", "aditya", "anshika"]
+students.length //3
