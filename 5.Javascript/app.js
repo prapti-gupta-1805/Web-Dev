@@ -109,3 +109,10 @@ while (i <= 5) {
     console.log(i);
     i++;
 }
+
+//for-of loop
+let fruits = ["mango","apple","banana","litchi","orange"];
+
+for(i of fruits) {
+    console.log(i);
+}
