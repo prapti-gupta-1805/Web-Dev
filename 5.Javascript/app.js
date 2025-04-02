@@ -43,13 +43,16 @@ console.log(`The total price is ${pencilPrice + eraserPrice} rupees`);
 //5 === '5' will return false (compares value AND type)
 
 //loops
-let age = 10;
-if (age >= 18) {
-    console.log("You can vote")
+let colour = 'red';
+if (colour ) {
+    console.log("Stop!");
 }
-else if (age < 18 ) {
-    console.log("cannot vote")
+else if (colour = 'yellow' ) {
+    console.log("Slow!");
+}
+else if (colour = 'green') {
+    console.log("Go!");
 }
 else {
-    console.log("Whatever")
+    console.log("Invalid colour");
 }
