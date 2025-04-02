@@ -1,4 +1,4 @@
-//console notes
+//basic notes
 
 // //declaration of variable
 // let a = 1;
@@ -10,7 +10,7 @@
 
 // //identifier rules
 //     //letters,numbers,_,$
-//     //
+//
 
 // //NaN - not a number (like 0/0) [value of 'number' data type]
 
@@ -22,12 +22,9 @@
 // 'prapti'.length //also returns 6
 // username[username.length-2] //returns 't'
 
-// fullname = 'prapti' + ' ' + 'gupta'
+// fullname = 'prapti' + ' ' + 'gupta' //concatenation
 
-// //undefined - A variable that has been declared but not assigned a value.
-// //null -  A value that explicitly represents "nothing". Not assigned by JavaScript automatically, must be set intentionally by the programmer.
-
-// //console.log() - to print message on console window
+// //to print message on console window
 // console.log("Hello!")
 
 console.log("hello world!")
@@ -54,5 +51,39 @@ else if (colour = 'green') {
     console.log("Go!");
 }
 else {
-    console.log("Invalid colour");
+    console.log("Light is broken");
 }
+
+//nested if else - standard syntax
+
+//switch - standard syntax
+
+//truthy and falsy
+// false, 0,-0, "", null, undefined, NaN, On (BigInt value) - false values
+//everything else - true values
+
+//alerts & prompts
+
+alert("Error");
+comsole.error("Error");
+console.warn("Warning");
+
+
+let Name = prompt("Enter name:");
+console.log(Name);
+
+//string methods
+str = "   prapti    ";
+console.log(str.trim());
+
+str1 = "PRApti";
+
+console.log(str.toUpperCase()); //PRAPTI
+console.log(str.toLowerCase()); //prapti
+
+str1.indexOf('A')
+
+//method chaining
+console.log(str1.toUpperCase().trim());
+
+str1.slice(2,4) //Apt
