@@ -116,3 +116,28 @@ let fruits = ["mango","apple","banana","litchi","orange"];
 for(i of fruits) {
     console.log(i);
 }
+
+//object literals
+    //collection of properties of an object in (key,value) pairs
+
+const student = {
+    name: "prapti",
+    age: 18,
+    cgpa: 8.14,
+    city: "delhi"
+};
+
+//access values
+student["name"]; //or
+student.name;
+
+//type conversion
+console.log(student[name]);       // "prapti" --> name gets converted to "name"
+console.log(student["name"]);     // "prapti" --> same as above
+
+//add/update value
+student.city = "mumbai";
+
+student.gender = "f";
+
+delete student.gender;
