@@ -113,7 +113,7 @@ while (i <= 5) {
 //for-of loop
 let fruits = ["mango","apple","banana","litchi","orange"];
 
-for(i of fruits) {
+for(let i of fruits) {
     console.log(i);
 }
 
@@ -131,13 +131,62 @@ const student = {
 student["name"]; //or
 student.name;
 
-//type conversion
-console.log(student[name]);       // "prapti" --> name gets converted to "name"
-console.log(student["name"]);     // "prapti" --> same as above
-
 //add/update value
 student.city = "mumbai";
 
 student.gender = "f";
 
 delete student.gender;
+
+//nested objects
+const student1 = {
+    prapti : {
+    age: 18,
+    cgpa: 8.14,
+    city: "delhi"
+    },
+    aditya : {
+        age: 19,
+        cgpa: 8.23,
+        city: "delhi"
+    }
+};
+
+student1.prapti.cgpa //dot opearator chaining
+
+//array of objects
+const classInfo = [
+    {
+        name: "prapti",
+        cgpa: "8.14"
+    },
+    {
+        name: "aditya",
+        cgpa: "8.23"
+    }
+];
+
+classInfo[1].name;
+
+//math object
+//properties
+Math.PI;
+Math.E;
+
+//methods
+Math.abs(-12.5); //12.5
+Math.pow(4,2); //16
+Math.floor(2.3); //2
+Math.ceil(2.3); //3
+Math.random(); //random float between 0 and 1
+
+//random integers
+let num = Math.random();
+num *= 10;
+num = Math.floor(num);
+num +=1; //to exclude 0 and include 10
+//or 
+Math.floor( Math.random() * 10  ) + 1;
+
+
+//functions
