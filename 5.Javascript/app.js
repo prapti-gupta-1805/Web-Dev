@@ -190,3 +190,127 @@ Math.floor( Math.random() * 10  ) + 1;
 
 
 //functions
+function hello() { //function definition
+    console.log("hello");
+}
+
+hello(); //function call
+
+function greet(name) {
+    console.log("hello" + name);
+    let greet = "hello" + name;
+    return greet;
+    //statements after return won't be executed
+    console.log("not printed"); //won't be printed
+}
+
+greet = greet("prapti");
+
+console.log(greet);
+
+//scope
+    //global scope - anywhere and everywhere
+    //funtion scope - variable defined inside a function are not accessible outside the function
+    //block scope - variable defined inside a block (inside curly braces) are only accessible inside it
+    //lexical scope - nested function
+    function outerFunc() {
+        let x = 1;
+        let y = 2;
+        function innerFunc() {
+            let z = x + y; //lexical scope
+            return z;
+        }
+        //return z will give error
+        console.log(innerFunc());
+    }
+
+    //another way to define function
+    const sum = function(a,b) {
+        return a + b;
+    }
+
+    sum(2,3);
+
+
+    //higher order functions
+        //takes or returns functions as input or output
+        function multipleGreet(func, n) {
+            for (let i = 1; i <= n; i++) {
+                func();
+            }
+        }
+        
+        const greet = function() {
+            console.log("hello");
+        };
+        
+        multipleGreet(greet, 2);        
+
+
+        function oddEvenTest(request) {
+            if (request === "odd") {
+                return function(n) {
+                    console.log(!(n % 2 === 0)); // true if odd
+                };
+            } else if (request === "even") {
+                return function(n) {
+                    console.log(n % 2 === 0); // true if even
+                };
+            } else {
+                console.log("wrong request");
+            }
+        }
+        
+// Methods
+// Actions that can be performed on an object.
+const calculator = {
+    add: function(a, b) {
+        return a + b;
+    },
+    sub: function(a, b) {
+        return a - b;
+    },
+    mul: function(a, b) {
+        return a * b;
+    }
+};
+
+calculator.add(1,2);
+
+//method shorthand
+const calculator1 = {
+    add(a, b) {
+        return a + b;
+    },
+    sub(a, b) {
+        return a - b;
+    }
+};
+
+//'this' keyword
+const student = {
+    name: "shradha",
+    age: 23,
+    eng: 95,
+    math: 93,
+    phy: 97,
+    getAvg() {
+        console.log(this); //student object
+        let avg = (this.eng + this.math + this.phy) / 3;
+        console.log(avg);
+    }
+};
+//this.eng, this.math, and this.phy access the respective subject marks from within the object
+
+function Avg() {
+    console.log(this); //prints window object
+}
+Avg();
+
+
+//try & catch
+try {
+console.log(aloo);
+} catch {
+    console.log("variable doesn't exist");
+};
