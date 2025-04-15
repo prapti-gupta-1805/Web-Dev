@@ -314,3 +314,27 @@ console.log(aloo);
 } catch {
     console.log("variable doesn't exist");
 };
+
+//arrow func
+const sub = (a,b) => {
+    console.log(a-b);
+}
+
+const mul = (a,b) => (a*b);
+
+//setTimeout
+setTimeout(() => {
+    const div = (a, b) => a / b;
+    console.log(div(10, 2));
+}, 4000); //4000ms = 4s
+
+//setInterval
+setInterval(() => {
+    const div = (a, b) => a / b;
+    console.log(div(10, 2));
+}, 2000);
+
+let abc = [1,2,3,4,5];
+Array.forEach(function (el) {
+    console.log(el);
+});
