@@ -288,7 +288,7 @@ const calculator1 = {
 };
 
 //'this' keyword
-const student = {
+const studentInfo = {
     name: "shradha",
     age: 23,
     eng: 95,
@@ -307,6 +307,13 @@ function Avg() {
 }
 Avg();
 
+//default parameter
+function func(a,b=2) {
+    return a+b;
+}
+
+func(1,2);
+func(1);
 
 //try & catch
 try {
@@ -334,7 +341,19 @@ setInterval(() => {
     console.log(div(10, 2));
 }, 2000);
 
+//higher order array methods
+
 let abc = [1,2,3,4,5];
-Array.forEach(function (el) {
+abc.forEach(function (el) {
     console.log(el);
 });
+
+let double = abc.map(function(el) {
+    return el*2;
+});
+
+let even = abc.filter( (num) => (num % 2 == 0));
+
+abc.every((el) => (el>0));
+
+abc.reduce ((res,el) => (res+el));
