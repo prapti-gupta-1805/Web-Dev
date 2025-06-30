@@ -19,14 +19,14 @@ console.log(username[username.length - 2]); // 't'
 
 let fullname = 'prapti' + ' ' + 'gupta'; // Concatenation
 
-// Console Output
+// Console Output from js file 
 console.log("Hello!");
-console.log("hello world!");
+console.log("hello", 1, (4+5));
 
 // Template Literals
 let pencilPrice = 10;
 let eraserPrice = 5;
-console.log(`Total price: ${pencilPrice + eraserPrice} rupees`);
+console.log(`Total price: ${pencilPrice + eraserPrice} rupees`); //back tick not single or double quotes
 
 // Comparison Operators
 console.log(5 == '5'); // true (compares value only)
@@ -49,9 +49,9 @@ if (color === 'red') {
 // Everything else is truthy
 
 // Alerts & Prompts
-alert("Error");
-console.error("Error");
-console.warn("Warning");
+alert("Something is wrong!");
+console.error("Error"); //gives error
+console.warn("Warning"); //gives warning
 
 let name = prompt("Enter name:");
 console.log(name);
