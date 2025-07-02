@@ -128,7 +128,7 @@ const student = {
 };
 
 //access values
-student["name"]; //or
+student["name"]; //or 
 student.name;
 
 //add/update value
@@ -247,7 +247,7 @@ console.log(greet);
         multipleGreet(greet, 2);        
 
 
-        function oddEvenTest(request) {
+        function oddEvenTest(request) { //request is input based on which it'll return a function
             if (request === "odd") {
                 return function(n) {
                     console.log(!(n % 2 === 0)); // true if odd
@@ -290,7 +290,6 @@ const calculator1 = {
 //'this' keyword
 const studentInfo = {
     name: "shradha",
-    age: 23,
     eng: 95,
     math: 93,
     phy: 97,
@@ -326,34 +325,82 @@ console.log(aloo);
 const sub = (a,b) => {
     console.log(a-b);
 }
+//func call: sub(3,2)
 
 const mul = (a,b) => (a*b);
 
 //setTimeout
+//setTimeout(func,time);
+//executed only once
 setTimeout(() => {
     const div = (a, b) => a / b;
     console.log(div(10, 2));
 }, 4000); //4000ms = 4s
 
 //setInterval
-setInterval(() => {
+//repeats after time
+let id = setInterval(() => {
     const div = (a, b) => a / b;
     console.log(div(10, 2));
 }, 2000);
 
+//to stop- call clearInterval(id)
+
 //higher order array methods
 
 let abc = [1,2,3,4,5];
-abc.forEach(function (el) {
+abc.forEach(function (el) { //runs function on each element of abc
     console.log(el);
 });
 
-let double = abc.map(function(el) {
+let double = abc.map(function(el) { //returns an array of results
     return el*2;
 });
 
-let even = abc.filter( (num) => (num % 2 == 0));
+let even = abc.filter( (num) => (num % 2 == 0)); //returns array containing only values that return true
 
-abc.every((el) => (el>0));
+abc.every((el) => (el>0)); //Returns true if all elements pass the test
 
-abc.reduce ((res,el) => (res+el));
+abc.some((el) => el > 0); //Returns true if any one or more elements pass the test
+
+abc.reduce((res,el) => (res+el)); //returns single value having performed condition on all elements
+//[1,2,3,4].reduce((res,el)) => (res+el));
+//output: 10
+
+//spread
+console.log(...[0,1,2,3,4,5]); //... sends each element individually
+console.log(..."prapti")
+
+let arr = [1,2,3,4,5];
+let newArr = [...arr]; //copy of arr
+console.log(newArr);
+
+let data = {
+    email: "prapti@gmail.com",
+    password: "xyz"
+}
+
+const copy = {...data, id: 123};
+
+//rest
+//takes indefinite number of arguments and bundles them into array
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3));       // 6
+console.log(sum(5, 10, 15, 20)); // 50
+
+//destructuring
+const colors = ['red', 'green', 'blue'];
+const [firstColor, secondColor] = colors; //these are individual variables, not an array
+
+console.log(firstColor);  // 'red'
+console.log(secondColor); // 'green'
+
+const person = {
+    Name: 'Prapti',
+    age: 25
+};
+
+const {Name, age} = person; //these are individual variables, not an objects
