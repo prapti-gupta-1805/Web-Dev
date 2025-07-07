@@ -32,3 +32,39 @@ img.setAttribute('id', 'spidermanImg');         // Setter
 // Inline Style Manipulation
 heading.style.color = 'purple';
 heading.style.backgroundColor = 'yellow';
+
+//Class List Manipulation
+console.log(img.classList);            
+img.classList.add("xyz");              
+img.classList.remove("xyz");           
+img.classList.contains("xyz");         
+img.classList.toggle("xyz");           
+
+
+//DOM Navigation
+let h4 = document.querySelector('h4');
+h4.parentElement;
+
+let div = document.querySelector('.box');
+div.children;
+div.childElementCount;
+
+let ul = document.querySelector('ul');
+ul.children[2].previousElementSibling;
+ul.children[2].nextElementSibling;
+
+
+//Creating & Appending Elements
+let p = document.createElement('p');
+p.innerText = "hi i am a new paragraph";
+document.body.appendChild(p); //makes p a child of body
+p.append("abc"); //adds abc at the end of p
+p.prepend("xyz"); //adds xyz at the start of p
+let span = document.createElement('span');
+span.innerText = "lala";
+p.insertAdjacentElement("beforebegin", span);
+
+//removing elements
+span.remove();
+p.lastChild.remove(); // Remove "abc"
+p.firstChild.remove(); // Remove "xyz"
