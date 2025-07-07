@@ -54,3 +54,34 @@ text.addEventListener("keydown", function(event) {
     console.log(event.key) //returns what key was pressed
     console.log(event.code) //returns code of key that was pressed
 });
+
+//form events
+let form = document.querySelector('form');
+let inp = document.querySelector('form input');
+//or let inp = this.elements[0];
+
+form.addEventListener("submit", function(event) {
+    alert("Form Submitted")
+    event.preventDefault(); //prevents default redirection to action
+
+    console.log(inp.value);
+});
+
+//more events
+// 'change': fires when value is changed and user is done (e.g., presses Enter or clicks away)
+// 'input': fires instantly as the value changes (while typing)
+
+//event bubbling
+// Event bubbling is when an event on a nested element first runs its handler, then "bubbles up" and triggers handlers on its parent elements.
+
+let parent = document.querySelector("#parent");
+let child = document.querySelector("#child");
+
+parent.addEventListener("click", function () {
+    console.log("Div clicked");
+    // event.stopPropagation(); //to stop bubbling here
+});
+
+child.addEventListener("click", function () {
+    console.log("Button clicked");
+});
