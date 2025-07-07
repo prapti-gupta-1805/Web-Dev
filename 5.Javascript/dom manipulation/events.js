@@ -9,3 +9,11 @@ function sayHello() {
     alert("hello!");
 };
 btn1.onclick = sayHello;
+
+//OR
+let btns = document.querySelectorAll("button"); // selects all <button> elements
+for (let btn of btns) {
+    btn.onclick = function() {
+        alert("get wrecked");
+    };
+}
