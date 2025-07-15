@@ -15,6 +15,7 @@ console.log(typeof 'a'); // "string"
 // String Operations
 let username = 'prapti';
 console.log(username.length); // 6
+
 console.log(username[username.length - 2]); // 't'
 
 let fullname = 'prapti' + ' ' + 'gupta'; // Concatenation
