@@ -70,3 +70,61 @@ saveToDb("user123")
 
 //then method: runs if promise is resolved
 //catch method: runs if promise is rejected
+
+//chaining promises
+saveToDb("user123")
+    .then(() => {
+        console.log("Data saved successfully!");
+        return saveToDb("user456");
+    })
+    .then(() => {
+            console.log("Data 2 saved successfully!");
+    })
+    .catch(() => {
+        console.log("Failed to save data.");
+    });
+
+//result and error
+saveToDb("user123")
+    .then((result) => {
+        console.log("Data saved successfully!");
+        console.log("result of promise:", result);
+    })
+    .catch((error) => {
+        console.log("Failed to save data.");
+        console.error("result of promise:", error);
+    });
+
+//async/await
+//async function is used to make a function return a promise
+async function greet() {
+    console.log("hello");
+};
+
+greet();
+
+//await pauses the execution of the async function until the promise is resolved
+function getNum() {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log(5)}, 1000);
+    });
+}
+
+async function demo() {
+    await getNum(); //waits for getNum to resolve
+    await getNum();
+    getNum();
+}
+
+demo();
+
+//handling rejections with await
+async function greet() {
+    try {
+        await Promise.reject("error");
+        console.log("hello");
+    } catch (error) {
+        console.error("Error:", error);
+    }
+};
