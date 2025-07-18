@@ -65,3 +65,16 @@ async function getCatFact2() {
 }
 
 getCatFact2();
+
+//sending headers with axios
+let config = {header: {Accept : "application/json"}};
+async function getCatFact3() {
+    try {
+    let response = await axios.get(url, config);
+    console.log(response.data.fact);
+    } catch (error) {
+    console.error(error);
+    }
+}
+
+getCatFact3();
