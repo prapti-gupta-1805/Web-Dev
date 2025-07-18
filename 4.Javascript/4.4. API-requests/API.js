@@ -22,3 +22,46 @@ let OriginalData = JSON.stringify(parsedData); // Convert JavaScript object to J
 //http headers: response and request headers
 //request headers are additional information sent by the client to the server with every request
 //response headers are additional information sent by the server to the client with every response
+
+//fetch() used to send a request and receive a response
+
+url = "https://catfact.ninja/fact";
+fetch(url) //returns a promise
+.then((response) => {
+    return response.json(); // parse the response as JSON
+})
+.then((data) => {
+    console.log(data.fact);
+})
+.catch((error) => {
+    console.error(error);
+});
+
+//fetch() with async/await
+async function getCatFact() {
+    try {
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(data.fact);
+    } catch (error) {
+    console.error(error);
+    }
+}
+
+getCatFact();
+
+//axios: library for making HTTP requests
+
+
+//axios.get() used to send a GET request
+//you don't have to parse the response as JSON
+async function getCatFact2() {
+    try {
+    let response = await axios.get(url);
+    console.log(response.data.fact);
+    } catch (error) {
+    console.error(error);
+    }
+}
+
+getCatFact2();
