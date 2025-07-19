@@ -11,7 +11,7 @@ console.log(Math.subtract(2, 3)); //now we can use the functions defined in math
 
 
 // Importing an entire directory
-const fruits = require("./fruits"); //importing the entire fruits directory - it will look for index.js in the directory and import it
+const fruits = require("fruits"); //importing the entire fruits directory - it will look for index.js in the directory and import it
 console.log(fruits);
 
 //npm: Node Package Manager
