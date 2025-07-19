@@ -1,14 +1,2 @@
 # Ignore all node_modules folders
 node_modules/
-
-# Optional: Ignore log files
-*.log
-
-# Optional: Ignore environment files
-.env
-
-# Optional: Ignore system or IDE-specific files
-.DS_Store
-.vscode/
-.idea/
-Thumbs.db

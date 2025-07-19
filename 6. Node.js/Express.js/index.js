@@ -7,3 +7,7 @@ app.listen(3000, () => {
 });
 
 //run localhost:3000 in browser to see the server response
+
+app.use((req, res) => {
+    console.log('Request received');
+});
