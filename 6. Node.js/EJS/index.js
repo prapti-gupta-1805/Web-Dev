@@ -1,0 +1,21 @@
+//EJS: Embedded JavaScript templating engine
+//Used to create templates for HTML pages
+
+
+//create views folder in the root directory for all templates
+
+const express = require('express');
+const app = express();
+
+port = 3000;
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+});
+
+//standard line of code
+app.set('view engine', 'ejs'); //set the view engine to EJS
+
+app.get('/', (req, res) => {
+    res.render('home.ejs'); //render the home.ejs file in the views folder
+    });
+
