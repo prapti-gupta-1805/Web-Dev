@@ -20,3 +20,8 @@ app.set("views", path.join(__dirname, '/views')); //set the views directory
 app.get('/', (req, res) => {
     res.render('home.ejs'); //render the home.ejs file in the views folder
     });
+
+app.get('/rolldice', (req, res) => {
+    let dice1 = Math.floor(Math.random() * 6) + 1;
+    res.render('rolldice.ejs', {diceVal});
+});
