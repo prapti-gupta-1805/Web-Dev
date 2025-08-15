@@ -23,5 +23,5 @@ app.get('/', (req, res) => {
 
 app.get('/rolldice', (req, res) => {
     let dice1 = Math.floor(Math.random() * 6) + 1;
-    res.render('rolldice.ejs', {diceVal});
+    res.render('rolldice.ejs', {diceVal: dice1});
 });
